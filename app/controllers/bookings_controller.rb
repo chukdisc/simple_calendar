@@ -15,7 +15,8 @@ class BookingsController < ApplicationController
       :name,
       :email,
       :phone,
-      :band_members)
+      :band_members,
+    )
   end
 
 end
