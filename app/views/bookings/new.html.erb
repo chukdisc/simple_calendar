@@ -12,6 +12,12 @@
     <%= form.text_field :band_members %>
   </section>
 
+  <% @days.each do |weekday, time_slots| %>
+    <ul>
+      <li><%= form.collection_check_boxes :time_slot_ids, time_slots, :id, :label %></li>
+    </ul>
+  <% end %>
+
 
 
 
