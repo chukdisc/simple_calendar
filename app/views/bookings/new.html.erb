@@ -1,0 +1,18 @@
+<h2>Make a booking!</h2>
+
+<%= form_for @booking do |form| %>
+  <%= form.label :name, "Name" %>
+  <%= form.text_field :name %>
+  <%= form.label :email, "Email" %>
+  <%= form.text_field :email %>
+  <%= form.label :phone, "Phone" %>
+  <%= form.text_field :phone %>
+  <%= form.label :band_members, "Band Members" %>
+  <%= form.text_field :band_members %>
+
+
+
+
+
+  <%= form.submit "Make booking" %>
+<% end %>
