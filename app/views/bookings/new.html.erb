@@ -13,6 +13,7 @@
   </section>
 
   <% @days.each do |weekday, time_slots| %>
+    <%= weekday %>
     <ul>
       <li><%= form.collection_check_boxes :time_slot_ids, time_slots, :id, :label %></li>
     </ul>

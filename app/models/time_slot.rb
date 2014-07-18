@@ -1,6 +1,12 @@
 class TimeSlot < ActiveRecord::Base
-  def weekday
-    started_at.wday
+  DURATION = 3.hours
+
+  def self.available
+    where(booking_id: nil)
+  end
+
+  def day_of_week 
+    started_at.strftime("%A")
   end
 
   def label
@@ -8,6 +14,6 @@ class TimeSlot < ActiveRecord::Base
   end
 
   def ended_at
-    started_at + 3.hours
+    started_at + DURATION
   end
 end

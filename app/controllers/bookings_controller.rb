@@ -1,7 +1,7 @@
 class BookingsController < ApplicationController
   def new
     @booking = Booking.new
-    @days = TimeSlot.where(booking_id: nil).group_by(&:weekday)
+    @days = TimeSlot.available.group_by(&:weekday)
   end
 
   def create
